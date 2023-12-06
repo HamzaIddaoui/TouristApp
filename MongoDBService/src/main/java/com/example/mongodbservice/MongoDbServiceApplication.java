@@ -5,8 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class MongoDbServiceApplication {
-
-    System.out.println("hhhhhhhhhhhh");
     public static void main(String[] args) {
         SpringApplication.run(MongoDbServiceApplication.class, args);
     }
