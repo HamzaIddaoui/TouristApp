@@ -17,12 +17,10 @@ spring:
     hikari:
       username: root
       password:
-  jpa:
-    hibernate:
-      ddl-auto: create
-    database: mysql
-    database-platform: org.hibernate.dialect.MariaDBDialect
+
 
 application:
   config:
-    DataBase-url: http://localhost:8090
+    DataTRIP-url: http://localhost:8090/api/vi/trips
+    DataBLOG-url: http://localhost:8090/api/vi/blogs
+    DataITIN-url: http://localhost:8090/api/vi/itinerarys
