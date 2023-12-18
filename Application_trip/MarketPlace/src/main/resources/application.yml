@@ -17,11 +17,6 @@ spring:
     hikari:
       username: root
       password:
-  jpa:
-    hibernate:
-      ddl-auto: create
-    database: mysql
-    database-platform: org.hibernate.dialect.MariaDBDialect
 
 application:
   config:
