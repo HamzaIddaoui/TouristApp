@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Microservices E com.iml" filepath="$PROJECT_DIR$/.idea/Microservices E com.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MysqlService/MysqlService.iml" filepath="$PROJECT_DIR$/MysqlService/MysqlService.iml" />
       <module fileurl="file://$PROJECT_DIR$/exception/exception.iml" filepath="$PROJECT_DIR$/exception/exception.iml" />
     </modules>
   </component>
