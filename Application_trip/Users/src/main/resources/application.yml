@@ -18,6 +18,7 @@ spring:
       username: root
       password:
 
+
 application:
   config:
-    DataBase-url: http://localhost:8090
+    Datas-url: http://localhost:8090/users

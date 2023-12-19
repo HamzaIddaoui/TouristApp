@@ -1,4 +1,4 @@
-package com.MysqlService.MysqlService.model;
+package com.example.Users.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,18 +9,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public  class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String firstname;
     private String lastname;
     private String username;
     private String password;
-
     @OneToMany(mappedBy = "sender", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Message> sentmessages = new ArrayList<>();
     @OneToMany(mappedBy = "receiver", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
