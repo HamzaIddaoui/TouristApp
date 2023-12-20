@@ -12,17 +12,17 @@ import java.sql.Timestamp;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public abstract class Message {
+public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String text;
     private Timestamp time;
-    @OneToOne(mappedBy = "message",cascade = CascadeType.ALL, orphanRemoval = true)
-    private ResponseMessage responseMessage;
+    //@JsonBackReference("UserSender_Msg")
     @ManyToOne
     @JoinColumn(name="sender_id")
     private User sender;
+    //@JsonManagedReference("UserReceiver_Msg")
     @ManyToOne
     @JoinColumn(name="receiver_id")
     private User receiver;

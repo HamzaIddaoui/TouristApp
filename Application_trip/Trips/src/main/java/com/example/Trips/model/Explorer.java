@@ -1,5 +1,6 @@
 package com.example.Trips.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,6 +17,7 @@ public class Explorer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @JsonManagedReference("Blog_Exp")
     @OneToMany(mappedBy = "explorer", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Blog> blogs = new ArrayList<>();
 }

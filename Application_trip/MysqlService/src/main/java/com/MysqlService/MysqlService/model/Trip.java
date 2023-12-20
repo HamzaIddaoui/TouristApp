@@ -1,5 +1,7 @@
 package com.MysqlService.MysqlService.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,8 +21,10 @@ public class Trip {
     private long id;
     private Date datestart;
     private Date dateend;
+    @JsonBackReference("Blog_Trip")
     @OneToOne(mappedBy = "trip", cascade = CascadeType.ALL, orphanRemoval = false)
     private Blog blog;
+    @JsonManagedReference("Trip_Itinerary")
     @OneToMany(mappedBy = "trip", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Itinerary> itineraries = new ArrayList<>();
 

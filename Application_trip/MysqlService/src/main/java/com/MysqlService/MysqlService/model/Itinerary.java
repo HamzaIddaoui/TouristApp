@@ -1,5 +1,6 @@
 package com.MysqlService.MysqlService.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,6 +18,7 @@ public class Itinerary {
     private long id;
     private Date datestart;
     private Date dateend;
+    @JsonBackReference("Trip_Itinerary")
     @ManyToOne
     @JoinColumn(name = "trip_id")
     private Trip trip;

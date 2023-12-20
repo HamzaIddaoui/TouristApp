@@ -7,5 +7,5 @@ import lombok.Data;
 @Entity
 @Data
 @AllArgsConstructor
-public class ItemIMP extends Item {
+public class ItemIMP extends Item{
 }
