@@ -49,11 +49,15 @@ public class ItineraryController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteItinerary(@PathVariable long id) {
+        /**
         if (Service.getItineraryById(id).isPresent()) {
             Service.deleteItinerary(id);
             return ResponseEntity.noContent().build();
         } else {
             return ResponseEntity.notFound().build();
         }
+        **/
+        Service.deleteItinerary(id);
+        return ResponseEntity.ok().build();
     }
 }
