@@ -1,5 +1,6 @@
 package com.example.Trips.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,6 +16,7 @@ public abstract class Item {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private float prix;
+    @JsonBackReference("User_Item")
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;

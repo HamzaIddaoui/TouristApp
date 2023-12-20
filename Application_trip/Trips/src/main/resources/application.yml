@@ -24,3 +24,4 @@ application:
     DataTRIP-url: http://localhost:8090/api/vi/trips
     DataBLOG-url: http://localhost:8090/api/vi/blogs
     DataITIN-url: http://localhost:8090/api/vi/itinerarys
+    DataCOMM-url: http://localhost:8090/api/vi/comments

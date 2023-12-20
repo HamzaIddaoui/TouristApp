@@ -1,5 +1,6 @@
 package com.MysqlService.MysqlService.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +19,7 @@ public class Comment {
     private long id;
     private String text;
     private Timestamp time;
+    @JsonBackReference("Blog_Comment")
     @ManyToOne
     @JoinColumn(name = "blog_id")
     private Blog blog;
